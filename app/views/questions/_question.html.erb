@@ -1,0 +1,13 @@
+<div>
+  <h3>
+    <%= link_to question_path(question) do %>
+      <%= question.title %>
+    <% end %>
+  </h3>
+
+  <time datetime="<%= question.formatted_created_at %>">
+    <%= question.formatted_created_at %>
+  </time>
+
+  <p><%= question.body %></p>
+</div>
