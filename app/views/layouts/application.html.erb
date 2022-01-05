@@ -12,9 +12,13 @@
   </head>
 
   <body>
-    <div class="container">
-      <p style="color: green"><%= notice %></p>
-      <%= yield %>
+  <%= render 'shared/header' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 pt-3">
+        <%= yield %>
+      </div>
     </div>
+  </div>
   </body>
 </html>
