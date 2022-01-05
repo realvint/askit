@@ -1,0 +1,5 @@
+<% flash.each do |type, message| %>
+  <div id="alert" class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissible" role="alert">
+    <%= sanitize(message) %>
+  </div>
+<% end %>
