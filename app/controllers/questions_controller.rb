@@ -5,10 +5,14 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  def show; end
+  def show
+    @answer = @question.answers.build
+    @answers = @question.answers.order created_at: :desc
+  end
 
   def new
     @question = Question.new
+
   end
 
   def edit; end
