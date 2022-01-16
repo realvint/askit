@@ -1,16 +1,18 @@
-<nav class="navbar navbar-expand-md sticky-top navbar-light bg-light ">
-  <div class="container">
-    <div class="navbar-brand">
-      <%= link_to 'AskIt', root_path %>
+<%= provide :main_menu do %>
+  <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light ">
+    <div class="container">
+      <div class="navbar-brand">
+        <%= link_to 'AskIt', root_path %>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <%= link_to 'Questions', questions_path, class: "ps-3 nav-link #{'active fw-bold' if current_page?(questions_path)}" %>
+        </ul>
+      </div>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <%= link_to 'Questions', questions_path, class: "ps-3 nav-link #{'active fw-bold' if current_page?(questions_path)}" %>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+<% end %>
