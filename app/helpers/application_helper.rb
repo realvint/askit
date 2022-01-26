@@ -1,6 +1,12 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   FLASH_NAME = {  success: 'alert-success', notice: 'alert-success',
                   error: 'alert-danger', alert: 'alert-danger' }.freeze
+
+  def pagination(obj)
+    raw(pagy_bootstrap_nav(obj)) if obj.pages > 1
+  end
 
   def bootstrap_class_for_flash(flash_type)
     flash = FLASH_NAME[flash_type.to_sym] || flash_type.to_s

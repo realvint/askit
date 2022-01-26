@@ -11,6 +11,7 @@ gem 'sprockets-rails'
 gem 'cssbundling-rails'
 gem 'jbuilder'
 gem 'jsbundling-rails'
+gem 'pagy', '~> 5.6'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
