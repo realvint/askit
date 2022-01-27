@@ -8,6 +8,7 @@ gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.0'
 gem 'sprockets-rails'
 
+gem 'bcrypt', '~> 3.1.7'
 gem 'cssbundling-rails'
 gem 'jbuilder'
 gem 'jsbundling-rails'
