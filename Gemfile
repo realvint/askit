@@ -10,6 +10,7 @@ gem 'sprockets-rails'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'cssbundling-rails'
+gem 'draper', '~> 4.0'
 gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'pagy', '~> 5.6'
